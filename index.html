@@ -79,6 +79,10 @@
         .catagoryFilter {
             background-color: gray;
         }
+
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -473,6 +477,121 @@
         
 
 </section>
+
+
+<section>
+    
+    <div class="container mt-4">
+        <!-- Card Container -->
+        <div class="card">
+            <div class="d-flex align-items-center">
+                <!-- First div: User Image -->
+                <div class="p-1">
+                    <img src="img/profile.jpg" class="profile" alt="User Image" style="width: 70px; height: 70px;">
+                </div>
+                
+                <!-- Second div: User Info (Text) -->
+                <div class="p-1 flex-grow-1">
+                    <h5 class="card-title">
+                        <a href="#">Ashraful Islam</a>
+                    </h5>
+                    <div class="d-flex">
+                        <small class="card-text me-3"><strong><i class="fas fa-list"></i></strong> Technology</small>
+                        <small class="card-text"><strong><i class="fas fa-map-marker-alt"></i></strong> 3/1/A, Main Street, City, Country</small>
+                    </div>
+                </div>
+                
+                <!-- Third div: Call Button -->
+                <div class="p-1">
+                    <button class="bntStyle" onclick="window.location.href='tel:+1234567890'">
+                        <i class="fas fa-phone-alt" style="transform: rotate(90deg);"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+
+
+
+
+<section>
+
+    <div class="container mt-4">
+        <!-- Social Media Post Card -->
+        <div class="card">
+    
+            <div class="d-flex align-items-center">
+                <!-- First div: User Image -->
+                <div class="p-1">
+                    <img src="img/profile.jpg" class="profile" alt="User Image" style="width: 70px; height: 70px;">
+                </div>
+                
+                <!-- Second div: User Info (Text) -->
+                <div class="p-1 flex-grow-1">
+                    <h5 class="card-title">
+                        <a href="#">Ashraful Islam</a>
+                    </h5>
+                    <div class="d-flex">
+                        <small class="card-text me-3"><strong><i class="fas fa-list"></i></strong> Technology</small>
+                        <small class="card-text"><strong><i class="fas fa-clock"></i></strong> 2 hr ago</small>
+                    </div>
+                </div>
+                
+                <!-- Third div: Call Button (3-dot menu) -->
+                <div class="p-1">
+                    <div class="dropdown">
+                        <button class="bntStyle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-ellipsis-h" style="transform: rotate(90deg);"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a></li>
+                            <li><a style="color: red;" class="dropdown-item" href="#"><i class="fas fa-trash"></i> Delete</a></li>
+                            <li><a style="color: red;" class="dropdown-item" href="#"><i class="fas fa-flag"></i> Report</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <p class="card-text p-2">We're thrilled to announce the launch of our new feature. Stay tuned for more updates and let us know what you think!</p>
+            <img src="https://via.placeholder.com/400x200" class="card-img-top p-2" alt="Post Image">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <!-- Like Button -->
+                    <button class="btn btn-outline-primary">
+                        <i class="fas fa-thumbs-up"></i> Like
+                    </button>
+                    <!-- Comment Button -->
+                    <button class="btn btn-outline-secondary">
+                        <i class="fas fa-comment"></i> Comment
+                    </button>
+                    <!-- Share Button -->
+                    <button class="btn btn-outline-success">
+                        <i class="fas fa-share"></i> Share
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <script>
