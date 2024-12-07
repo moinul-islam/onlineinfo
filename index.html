@@ -560,14 +560,14 @@
                     </div>
                 </div>
             </div>
-    
+        
             <!-- Post Text with See More/See Less -->
             <p class="card-text p-3" id="postText">
                 We're thrilled to announce the launch of our new feature. Stay tuned for more updates and let us know what you think! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis, nunc sit amet faucibus ultrices, metus neque congue dolor, nec fermentum augue lectus at quam. Curabitur viverra sapien et mauris volutpat, in condimentum turpis cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer aliquet, magna sit amet venenatis fermentum, enim urna elementum dui, a tincidunt augue felis ac eros. 
                 <span id="dots">...</span><span id="moreText" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis, nunc sit amet faucibus ultrices, metus neque congue dolor, nec fermentum augue lectus at quam. Curabitur viverra sapien et mauris volutpat, in condimentum turpis cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer aliquet, magna sit amet venenatis fermentum, enim urna elementum dui, a tincidunt augue felis ac eros.</span>
                 <a href="javascript:void(0);" onclick="toggleText()" id="seeMore">See more</a>
             </p>
-    
+        
             <img src="https://via.placeholder.com/400x200" class="card-img-top rounded-3" alt="Post Image">
             
             <div class="card-body">
@@ -605,9 +605,9 @@
                         <!-- Existing Comments List -->
                         <div class="comment mb-3">
                             <div class="d-flex align-items-center">
-                                <img src="img/profile.jpg" class="profile rounded-circle" alt="User Image" style="width: 40px; height: 40px;">
+                                <img src="img/user.png" class="profile rounded-circle" alt="User Image" style="width: 40px; height: 40px;">
                                 <div class="ms-3">
-                                    <strong class="text-dark">John Doe</strong>
+                                    <strong class="text-dark">Moinul Islam</strong>
                                     <small class="text-muted">2 hours ago</small>
                                     <p class="mt-1">This is a demo comment! Really excited about this feature!</p>
                                 </div>
@@ -622,13 +622,52 @@
                                     </ul>
                                 </div>
                             </div>
+    
+                            <!-- Reply Button and Nested Replies -->
+                            <div class="mt-2 ms-4">
+                                <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse" data-bs-target="#replySection1">
+                                    <i class="fas fa-reply"></i> Reply
+                                </button>
+                                <!-- Reply Section -->
+                                <div class="collapse mt-2" id="replySection1">
+                                    <div class="d-flex mb-3">
+                                        <img src="img/user.png" class="profile rounded-circle" alt="User Image" style="width: 40px; height: 40px;">
+                                        <div class="ms-3 flex-grow-1">
+                                            <textarea class="form-control" id="reply-comment-box1" placeholder="Write a reply..." rows="2"></textarea>
+                                            <button class="btn btn-primary mt-2" onclick="postReply(1)">Post Reply</button>
+                                        </div>
+                                    </div>
+    
+                                    <!-- Reply Display -->
+                                    <div class="reply mt-3">
+                                        <div class="d-flex align-items-center">
+                                            <img src="img/user.png" class="profile rounded-circle" alt="User Image" style="width: 40px; height: 40px;">
+                                            <div class="ms-3">
+                                                <strong class="text-dark">Aslam Hossain</strong>
+                                                <small class="text-muted">5 minutes ago</small>
+                                                <p class="mt-1">This is a reply to the comment!</p>
+                                            </div>
+                                            <div class="dropdown ms-auto">
+                                                <button class="btn btn-link p-0" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fas fa-ellipsis-h" style="color: #555;"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                                    <li><a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a></li>
+                                                    <li><a style="color: red;" class="dropdown-item" href="#"><i class="fas fa-trash"></i> Delete</a></li>
+                                                    <li><a style="color: red;" class="dropdown-item" href="#"><i class="fas fa-flag"></i> Report</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
         
                         <div class="comment mb-3">
                             <div class="d-flex align-items-center">
-                                <img src="img/profile.jpg" class="profile rounded-circle" alt="User Image" style="width: 40px; height: 40px;">
+                                <img src="img/user.png" class="profile rounded-circle" alt="User Image" style="width: 40px; height: 40px;">
                                 <div class="ms-3">
-                                    <strong class="text-dark">Jane Doe</strong>
+                                    <strong class="text-dark">Badol Ahmmed</strong>
                                     <small class="text-muted">3 hours ago</small>
                                     <p class="mt-1">Another demo comment here! This is awesome.</p>
                                 </div>
@@ -649,6 +688,14 @@
             </div>
         </div>
     </div>
+    
+
+
+
+
+
+
+
 
 </section>
 
