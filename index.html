@@ -16,7 +16,6 @@
             justify-content: space-between;
             padding: 0.5rem 1rem;
             white-space: nowrap;
-            position: relative;
         }
 
         /* Adjustments for the layout */
@@ -83,6 +82,26 @@
         a {
             text-decoration: none;
         }
+
+        
+    .bntStyle:hover {
+      color: #0056b3;
+    }
+    .liked {
+      color: #ff0000; /* Liked color */
+    }
+
+    
+    .bntStyle:hover {
+      color: #0056b3;
+    }
+    .count {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+      display: block;
+      text-align: center;
+    }
     </style>
 </head>
 
@@ -101,10 +120,10 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item active" href="#"><i class="fas fa-home me-2"></i>Home</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="fas fa-address-book me-2"></i>Phonebook</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="fas fa-newspaper me-2"></i>Newsfeed</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="fas fa-store me-2"></i>Marketplace</a></li>
+                    <li><a class="dropdown-item active" href="index.html"><i class="fas fa-home me-2"></i>Home</a></li>
+                    <li><a class="dropdown-item" href="phonebook.html"><i class="fas fa-address-book me-2"></i>Phonebook</a></li>
+                    <li><a class="dropdown-item" href="newsfeed.html"><i class="fas fa-newspaper me-2"></i>Newsfeed</a></li>
+                    <li><a class="dropdown-item" href="marketplace.html"><i class="fas fa-store me-2"></i>Marketplace</a></li>
                 </ul>
             </div>
         </div>
@@ -166,6 +185,9 @@
                             <select class="form-select" id="area" disabled>
                                 <option value="" disabled selected>Select Area</option>
                             </select>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary">Go</button>
                         </div>
                     </form>
                 </div>
@@ -424,6 +446,7 @@
 
 
 
+
 <section class="mt-3">
 
     <div class="container">
@@ -479,19 +502,24 @@
 </section>
 
 
+
+
+
+
+
+
+
+
+<!-- profile -->
+
 <section>
-    
-   
-    
-
-
     <div class="container mt-4">
         <!-- Card Container -->
         <div class="card shadow-sm border-light rounded-3">
-            <div class="d-flex align-items-center p-3">
+            <div class="d-flex align-items-center p-1">
                 <!-- First div: User Image -->
-                <div class="p-2">
-                    <img src="img/profile.jpg" class="profile rounded-circle" alt="User Image" style="width: 70px; height: 70px; object-fit: cover;">
+                <div class="">
+                    <img src="img/profile.jpg" class="" alt="User Image" style="width: 100px; height: 100px; object-fit: cover;">
                 </div>
                 
                 <!-- Second div: User Info (Text) -->
@@ -500,17 +528,19 @@
                         <a href="#" class="text-dark text-decoration-none font-weight-bold">Ashraful Islam</a>
                     </h5>
                     <div class="d-flex">
-                        <small class="card-text me-3 text-muted"><i class="fas fa-list"></i> Technology</small>
+                        <small class="card-text me-3 text-muted"><i class="fas fa-list"></i> Laravel Programer</small>
                         <small class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> 3/1/A, Main Street, City, Country</small>
                     </div>
                 </div>
                 
                 <!-- Third div: Call Button -->
-                <div class="p-2">
-                    <button class="bntStyle" onclick="window.location.href='tel:+1234567890'" aria-label="Call Ashraful">
-                        <i class="fas fa-phone-alt" style="transform: rotate(90deg); font-size: 18px;"></i>
+                <div class="p-2 text-center">
+                    <button class="bntStyle" id="callBtn" aria-label="Call Ashraful">
+                      <i class="fas fa-phone-alt" style="transform: rotate(90deg);"></i>
+                      <span class="count" id="callCount">0</span>
                     </button>
-                </div>
+                  </div>                  
+                
             </div>
         </div>
     </div>
@@ -522,181 +552,113 @@
 
 
 
+
+
+
+
+<!-- post -->
 <section>
-    
-
-
     <div class="container mt-4">
-        <!-- Social Media Post Card -->
-        <div class="card shadow-sm border-light">
-            <div class="d-flex align-items-center p-3">
-                <!-- First div: User Image -->
-                <div class="p-1">
-                    <img src="img/profile.jpg" class="profile rounded-circle" alt="User Image" style="width: 70px; height: 70px;">
-                </div>
-                
-                <!-- Second div: User Info (Text) -->
-                <div class="p-1 flex-grow-1">
-                    <h5 class="card-title mb-0">
-                        <a href="#" class="text-decoration-none text-dark">Ashraful Islam</a>
-                    </h5>
-                    <div class="d-flex">
-                        <small class="card-text me-3 text-muted"><strong><i class="fas fa-list"></i></strong> Technology</small>
-                        <small class="card-text text-muted"><strong><i class="fas fa-clock"></i></strong> 2 hours ago</small>
-                    </div>
-                </div>
-                
-                <!-- Third div: Call Button (3-dot menu) -->
-                <div class="p-1">
-                    <div class="dropdown">
-                        <button class="btn btn-link p-0" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h" style="transform: rotate(90deg); color: #555;"></i>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a></li>
-                            <li><a style="color: red;" class="dropdown-item" href="#"><i class="fas fa-trash"></i> Delete</a></li>
-                            <li><a style="color: red;" class="dropdown-item" href="#"><i class="fas fa-flag"></i> Report</a></li>
-                        </ul>
-                    </div>
-                </div>
+      <!-- Card Container -->
+      <div class="card shadow-sm border-light rounded-3">
+        <div class="d-flex align-items-center p-1">
+          <!-- First div: User Image -->
+          <div class="">
+            <img src="img/news.webp" class="" alt="User Image" style="width: 100px; height: 100px; object-fit: cover;">
+          </div>
+          
+          <!-- Second div: User Info (Text) -->
+          <div class="p-2 flex-grow-1">
+            <h5 class="card-title mb-1">
+              <a href="#" class="text-dark text-decoration-none font-weight-bold">আজ সকালে ট্রাকের ধাক্কায় ঢাকা নারায়াণগঞ্জ লিংক রোড় এ নিহত ২ জন।</a>
+            </h5>
+            <div class="d-flex">
+              <small class="card-text me-3 text-muted"><i class="fas fa-list"></i> Accident</small>
+              <small class="card-text text-muted"><i class="fas fa-clock"></i> 3 hr ago</small>
             </div>
-        
-            <!-- Post Text with See More/See Less -->
-            <p class="card-text p-3" id="postText">
-                We're thrilled to announce the launch of our new feature. Stay tuned for more updates and let us know what you think! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis, nunc sit amet faucibus ultrices, metus neque congue dolor, nec fermentum augue lectus at quam. Curabitur viverra sapien et mauris volutpat, in condimentum turpis cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer aliquet, magna sit amet venenatis fermentum, enim urna elementum dui, a tincidunt augue felis ac eros. 
-                <span id="dots">...</span><span id="moreText" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis, nunc sit amet faucibus ultrices, metus neque congue dolor, nec fermentum augue lectus at quam. Curabitur viverra sapien et mauris volutpat, in condimentum turpis cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer aliquet, magna sit amet venenatis fermentum, enim urna elementum dui, a tincidunt augue felis ac eros.</span>
-                <a href="javascript:void(0);" onclick="toggleText()" id="seeMore">See more</a>
-            </p>
-        
-            <img src="https://via.placeholder.com/400x200" class="card-img-top rounded-3" alt="Post Image">
-            
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <!-- Like Button -->
-                    <button class="btn btn-outline-primary btn-sm">
-                        <i class="fas fa-thumbs-up"></i> Like
-                    </button>
-                    <!-- Unlike Button -->
-                    <button class="btn btn-outline-danger btn-sm">
-                        <i class="fas fa-thumbs-down"></i> Unlike
-                    </button>
-                    <!-- Comment Button (Triggers the comment section) -->
-                    <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse" data-bs-target="#commentsSection">
-                        <i class="fas fa-comment"></i> Comment
-                    </button>
-                    <!-- Share Button -->
-                    <button class="btn btn-outline-success btn-sm">
-                        <i class="fas fa-share"></i> Share
-                    </button>
-                </div>
-        
-                <!-- Comment Section (Initially hidden) -->
-                <div class="collapse mt-3" id="commentsSection">
-                    <div class="">
-                        <!-- Comment Box (For new comment) -->
-                        <div class="d-flex mb-3">
-                            <img src="img/profile.jpg" class="profile rounded-circle" alt="User Image" style="width: 40px; height: 40px;">
-                            <div class="ms-3 flex-grow-1">
-                                <textarea class="form-control" id="new-comment-box" placeholder="Write a comment..." rows="2"></textarea>
-                                <button class="btn btn-primary mt-2" onclick="postComment()">Post Comment</button>
-                            </div>
-                        </div>
-        
-                        <!-- Existing Comments List -->
-                        <div class="comment mb-3">
-                            <div class="d-flex align-items-center">
-                                <img src="img/user.png" class="profile rounded-circle" alt="User Image" style="width: 40px; height: 40px;">
-                                <div class="ms-3">
-                                    <strong class="text-dark">Moinul Islam</strong>
-                                    <small class="text-muted">2 hours ago</small>
-                                    <p class="mt-1">This is a demo comment! Really excited about this feature!</p>
-                                </div>
-                                <div class="dropdown ms-auto">
-                                    <button class="btn btn-link p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fas fa-ellipsis-h" style="color: #555;"></i>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a></li>
-                                        <li><a style="color: red;" class="dropdown-item" href="#"><i class="fas fa-trash"></i> Delete</a></li>
-                                        <li><a style="color: red;" class="dropdown-item" href="#"><i class="fas fa-flag"></i> Report</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- Reply Button and Nested Replies -->
-                            <div class="mt-2 ms-4">
-                                <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse" data-bs-target="#replySection1">
-                                    <i class="fas fa-reply"></i> Reply
-                                </button>
-                                <!-- Reply Section -->
-                                <div class="collapse mt-2" id="replySection1">
-                                    <div class="d-flex mb-3">
-                                        <img src="img/user.png" class="profile rounded-circle" alt="User Image" style="width: 40px; height: 40px;">
-                                        <div class="ms-3 flex-grow-1">
-                                            <textarea class="form-control" id="reply-comment-box1" placeholder="Write a reply..." rows="2"></textarea>
-                                            <button class="btn btn-primary mt-2" onclick="postReply(1)">Post Reply</button>
-                                        </div>
-                                    </div>
-    
-                                    <!-- Reply Display -->
-                                    <div class="reply mt-3">
-                                        <div class="d-flex align-items-center">
-                                            <img src="img/user.png" class="profile rounded-circle" alt="User Image" style="width: 40px; height: 40px;">
-                                            <div class="ms-3">
-                                                <strong class="text-dark">Aslam Hossain</strong>
-                                                <small class="text-muted">5 minutes ago</small>
-                                                <p class="mt-1">This is a reply to the comment!</p>
-                                            </div>
-                                            <div class="dropdown ms-auto">
-                                                <button class="btn btn-link p-0" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <i class="fas fa-ellipsis-h" style="color: #555;"></i>
-                                                </button>
-                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                                    <li><a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a></li>
-                                                    <li><a style="color: red;" class="dropdown-item" href="#"><i class="fas fa-trash"></i> Delete</a></li>
-                                                    <li><a style="color: red;" class="dropdown-item" href="#"><i class="fas fa-flag"></i> Report</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="comment mb-3">
-                            <div class="d-flex align-items-center">
-                                <img src="img/user.png" class="profile rounded-circle" alt="User Image" style="width: 40px; height: 40px;">
-                                <div class="ms-3">
-                                    <strong class="text-dark">Badol Ahmmed</strong>
-                                    <small class="text-muted">3 hours ago</small>
-                                    <p class="mt-1">Another demo comment here! This is awesome.</p>
-                                </div>
-                                <div class="dropdown ms-auto">
-                                    <button class="btn btn-link p-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fas fa-ellipsis-h" style="color: #555;"></i>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                        <li><a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a></li>
-                                        <li><a style="color: red;" class="dropdown-item" href="#"><i class="fas fa-trash"></i> Delete</a></li>
-                                        <li><a style="color: red;" class="dropdown-item" href="#"><i class="fas fa-flag"></i> Report</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+          
+          <!-- Third div: Like Button -->
+          <div class="p-2">
+            <button class="bntStyle" id="likeBtn">
+              <i class="fas fa-thumbs-up" id="likeIcon"></i> <span id="likeCount">0</span>
+            </button>
+          </div>
         </div>
+      </div>
     </div>
+  </section>
+
+
+
+
+
+
+<!-- product -->
+<section>
+    <div class="container my-3">
+        <div class="card shadow-sm border-light rounded-3">
+          <div class="d-flex align-items-center p-1">
+            <!-- First div: User Image -->
+            <div class="">
+              <img src="img/mobile.jpg" class="" alt="User Image" style="width: 100px; height: 100px; object-fit: cover;">
+            </div>
+            <!-- Second div: User Info (Text) -->
+            <div class="p-2 flex-grow-1">
+              <h5 class="card-title mb-1">
+                <a href="#" class="text-dark text-decoration-none font-weight-bold">Realme 5i 8/64 GB</a>
+              </h5>
+              <div class="d-flex">
+                <small class="card-text me-3 text-muted"><i class="fas fa-list"></i> Mobile</small>
+                <small class="card-text text-muted"><i class="fas fa-dollar-sign"></i> 10,000</small>
+              </div>
+            </div>
+            <!-- Third div: Cart Button -->
+            <div class="p-2">
+              <button class="bntStyle" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+
+            
+
+          </div>
+        </div>
+      </div>
     
-
-
-
-
-
-
-
-
+      <!-- Modal Structure -->
+      <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cartModalLabel">Confirm Order</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="productName" value="Realme 5i 8/64 GB" readonly>
+                </div>
+                <div class="mb-3">
+                  <input type="number" class="form-control" id="quantity" placeholder="Enter Quantity">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="customerName" placeholder="Enter Your Name">
+                </div>
+                <div class="mb-3">
+                  <input type="tel" class="form-control" id="phone" placeholder="Enter Phone Number">
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" id="address" rows="3" placeholder="Enter Your Address"></textarea>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-success">Confirm Order</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 </section>
 
 
@@ -975,6 +937,66 @@
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+    // like 
+     // Select the like button, like icon, and like count elements
+  const likeBtn = document.getElementById('likeBtn');
+  const likeIcon = document.getElementById('likeIcon');
+  const likeCount = document.getElementById('likeCount');
+
+  // Initialize a variable to keep track of likes
+  let isLiked = false;
+  let likes = 0;
+
+  // Add click event listener to the like button
+  likeBtn.addEventListener('click', function () {
+    if (isLiked) {
+      // If already liked, unlike it
+      likes--;
+      likeIcon.classList.remove('liked');
+      isLiked = false;
+    } else {
+      // If not liked, like it
+      likes++;
+      likeIcon.classList.add('liked');
+      isLiked = true;
+    }
+    likeCount.textContent = likes; // Update the like count display
+  });
+
+
+
+
+
+
+
+
+
+
+
+//   call count
+// Select the call button and count element
+const callBtn = document.getElementById('callBtn');
+                    const callCount = document.getElementById('callCount');
+                  
+                    // Initialize call count
+                    let count = 0;
+                  
+                    // Add event listener to the button
+                    callBtn.addEventListener('click', function () {
+                      count++; // Increment the call count
+                      callCount.textContent = count; // Update the displayed count
+                      window.location.href = 'tel:+1234567890'; // Redirect to the call
+                    });
     </script>
 
 
