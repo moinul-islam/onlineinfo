@@ -17,47 +17,18 @@
     <nav class="navbar bg-light sticky-top">
         <!-- Left Section (Logo and Menu) -->
         <div class="left-section">
-            <button class="bntStyle me-2" data-bs-toggle="modal" data-bs-target="#countryModal">
-                <img src="img/logo.png" alt="" class="profile">
-            </button>
-
-            <!-- Menu (left dropdown) -->
-            <div class="dropdown">
-                <button class="bntStyle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item active" href="index.html"><i class="fas fa-home me-2"></i>Home</a></li>
-                    <li><a class="dropdown-item" href="phonebook.html"><i class="fas fa-address-book me-2"></i>Phonebook</a></li>
-                    <li><a class="dropdown-item" href="newsfeed.html"><i class="fas fa-newspaper me-2"></i>Newsfeed</a></li>
-                    <li><a class="dropdown-item" href="marketplace.html"><i class="fas fa-store me-2"></i>Marketplace</a></li>
-                </ul>
-            </div>
+            <a href="index.html">
+                <img src="img/back.png" alt="" class="profile">
+            </a>
         </div>
 
         <!-- Search Bar (Center Section) -->
         <div class="search-bar">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="button">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
+            <h6><b>Profile View</b></h6>
         </div>
 
         <!-- Right Section (Notification and User Profile) -->
         <div class="right-section">
-            <!-- Notification Button (left side of the user profile) -->
-            <div class="dropdown me-2">
-                <button class="bntStyle" type="button" id="notificationMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-bell"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationMenuButton">
-                    <li><a class="dropdown-item" href="#">Notification 1</a></li>
-                    <li><a class="dropdown-item" href="#">Notification 2</a></li>
-                    <li><a class="dropdown-item" href="#">Notification 3</a></li>
-                </ul>
-            </div>
 
             <!-- User Profile -->
             <button class="bntStyle" data-bs-toggle="modal" data-bs-target="#profileModal">
@@ -354,63 +325,6 @@
 
 
 
-<section class="mt-3">
-
-    <div class="container">
-        <div id="adSlider" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://via.placeholder.com/600x160?text=Ad+1" class="d-block w-100" alt="Ad 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://via.placeholder.com/600x160?text=Ad+2" class="d-block w-100" alt="Ad 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://via.placeholder.com/600x160?text=Ad+3" class="d-block w-100" alt="Ad 3">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#adSlider" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#adSlider" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    
-        <!-- Dropdown Fields in a Single Row -->
-        <div class="d-flex justify-content-between catagoryFilter">
-            <div class="mb-2 mt-2 flex-fill mx-2">
-                <select class="form-select" id="category">
-                    <option selected>Select Category</option>
-                    <option value="1">Technology</option>
-                    <option value="2">Health</option>
-                    <option value="3">Business</option>
-                    <option value="4">Entertainment</option>
-                </select>
-            </div>
-    
-            <div class="mb-2 mt-2 flex-fill mx-2" id="subcategory-container" style="display:none;">
-                <select class="form-select" id="subcategory">
-                    <option selected>Select Sub Category</option>
-                </select>
-            </div>
-    
-            <div class="mb-2 mt-2 flex-fill mx-2" id="topics-container" style="display:none;">
-                <select class="form-select" id="topics">
-                    <option selected>Select Topic</option>
-                </select>
-            </div>
-        </div>
-    </div>
-        
-
-</section>
-
-
-
-
 
 
 
@@ -421,158 +335,52 @@
 
 <section>
     <div class="container mt-4">
-      <!-- Card Container -->
-      <div class="card shadow-sm border-light rounded-3">
-        <div class="d-flex align-items-center p-1">
-          <!-- First div: User Image -->
-          <div class="">
-            <img src="img/profile.jpg" class="" alt="User Image" style="width: 100px; height: 100px; object-fit: cover;">
-          </div>
-          
-          <!-- Second div: User Info (Text) -->
-          <div class="p-2 flex-grow-1">
-            <h5 class="card-title mb-1">
-              <a href="#" class="text-dark text-decoration-none font-weight-bold">Ashraful Islam</a>
-            </h5>
-            <div class="d-flex">
-              <small class="card-text me-3 text-muted"><i class="fas fa-list"></i> Laravel Programer</small>
-              <small class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> 3/1/A, Main Street, City, Country</small>
-            </div>
-          </div>
-          
-          <!-- Third div: Call Button -->
-          <div class="p-2 text-center">
-            <button class="bntStyle" id="callBtn" aria-label="Call Ashraful">
-              <i class="fas fa-phone-alt" style="transform: rotate(90deg);"></i>
-              <span class="count" id="callCount">0</span>
-            </button>
-          </div>
-        </div>
-  
-        <!-- Collapsible Section -->
-        <div class="collapse" id="extraDetails">
-          <div class="card-body">
-            <h5>Additional Information</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
-            <p>More details about Ashraful, his projects, or personal interests.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-
-
-
-
-
-
-
-
-
-<!-- post -->
-<section>
-  <div class="container mt-4">
-    <!-- Card Container -->
-    <div class="card shadow-sm border-light rounded-3">
-      <div class="d-flex align-items-center p-1">
-        <!-- First div: User Image -->
-        <div class="">
-          <img src="img/news.webp" class="" alt="User Image" style="width: 100px; height: 100px; object-fit: cover;">
-        </div>
-        
-        <!-- Second div: User Info (Text) -->
-        <div class="p-2 flex-grow-1">
-          <h5 class="card-title mb-1">
-            <a href="#" class="text-dark text-decoration-none font-weight-bold">আজ সকালে ট্রাকের ধাক্কায় ঢাকা নারায়াণগঞ্জ লিংক রোড় এ নিহত ২ জন।</a>
-          </h5>
-          <div class="d-flex">
-            <small class="card-text me-3 text-muted"><i class="fas fa-list"></i> Accident</small>
-            <small class="card-text text-muted"><i class="fas fa-clock"></i> 3 hr ago</small>
-          </div>
-        </div>
-        
-        <!-- Third div: Like Button -->
-        <div class="p-2">
-          <button class="bntStyle" id="likeBtn" onclick="toggleLike()">
-            <i class="fas fa-thumbs-up" id="likeIcon"></i>
-            <span id="likeCount">0</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<!-- product -->
-<section>
-    <div class="container my-3">
+        <!-- Card Container -->
         <div class="card shadow-sm border-light rounded-3">
-          <div class="d-flex align-items-center p-1">
-            <!-- First div: User Image -->
-            <div class="">
-              <img src="img/mobile.jpg" class="" alt="User Image" style="width: 100px; height: 100px; object-fit: cover;">
-            </div>
-            <!-- Second div: User Info (Text) -->
-            <div class="p-2 flex-grow-1">
-              <h5 class="card-title mb-1">
-                <a href="#" class="text-dark text-decoration-none font-weight-bold">Realme 5i 8/64 GB</a>
-              </h5>
-              <div class="d-flex">
-                <small class="card-text me-3 text-muted"><i class="fas fa-list"></i> Mobile</small>
-                <small class="card-text text-muted"><i class="fas fa-dollar-sign"></i> 10,000</small>
-              </div>
-            </div>
-            <!-- Third div: Cart Button -->
-              <div class="p-2">
-                <button class="bntStyle" onclick="incrementCart(this)" id="cartBtn" data-bs-toggle="modal" data-bs-target="#cartModal">
-                  <i class="fas fa-shopping-cart"></i>
-                  <span class="count">0</span>
-                </button>
-              </div>
-               
-          </div>
+            
+
+                <!-- Second div: User Info (Text) -->
+                <div class="p-2 flex-grow-1">
+                    <h5 class="card-title mb-1">
+                        <a href="#" class="text-dark text-decoration-none font-weight-bold">Ashraful Islam</a>
+                    </h5>
+                    <div class="d-flex">
+                        <small class="card-text me-3 text-muted"><i class="fas fa-list"></i> Laravel Programer</small>
+                        <small class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> 3/1/A, Main Street, City, Country</small>
+                    </div>
+                </div>
+
+                <!-- First div: User Image -->
+                <div class="">
+                    <img src="img/profile.jpg" class="" alt="User Image" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                
+                
+                
+                <!-- Third div: Call Button -->
+                <div class="p-2 text-center">
+                    <button class="bntStyle" id="callBtn" aria-label="Call Ashraful">
+                      <i class="fas fa-phone-alt" style="transform: rotate(90deg);"></i>
+                      <span class="count" id="callCount">0</span>
+                    </button>
+                  </div>                  
+            
         </div>
-      </div>
+    </div>
     
-      <!-- Modal Structure -->
-      <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="cartModalLabel">Confirm Order</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="mb-3">
-                  <input type="text" class="form-control" id="productName" value="Realme 5i 8/64 GB" readonly>
-                </div>
-                <div class="mb-3">
-                  <input type="number" class="form-control" id="quantity" placeholder="Enter Quantity">
-                </div>
-                <div class="mb-3">
-                  <input type="text" class="form-control" id="customerName" placeholder="Enter Your Name">
-                </div>
-                <div class="mb-3">
-                  <input type="tel" class="form-control" id="phone" placeholder="Enter Phone Number">
-                </div>
-                <div class="mb-3">
-                  <textarea class="form-control" id="address" rows="3" placeholder="Enter Your Address"></textarea>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-success">Confirm Order</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+
 </section>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

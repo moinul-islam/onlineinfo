@@ -1,0 +1,93 @@
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+/* Adjustments for the layout */
+.navbar .left-section,
+.navbar .right-section {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .search-bar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar .input-group {
+    width: 100%;
+    max-width: 600px; /* Limit the width of search bar */
+}
+
+.navbar .btn {
+    margin: 0 5px;
+}
+
+/* .dropdown-menu {
+    z-index: 1050;
+    position: absolute;
+    top: 100%;
+} */
+
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+.dropdown-menu-start {
+    left: 0;
+    right: auto;
+}
+
+.right-section {
+    margin-left: auto; /* Pushes notification and profile to the right */
+}
+
+
+.profile {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.bntStyle {
+    border: none;
+    background-color: transparent;
+}
+
+.container {
+    max-width: 622px;
+}
+
+.catagoryFilter {
+    background-color: gray;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.bntStyle:hover {
+color: #0056b3;
+}
+.liked {
+color: #ff0000; /* Liked color */
+}
+
+
+.bntStyle:hover {
+color: #0056b3;
+}
+.count {
+font-size: 14px;
+color: #555;
+margin-top: 5px;
+display: block;
+text-align: center;
+}
