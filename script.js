@@ -352,3 +352,32 @@ document.querySelector('.card').addEventListener('click', function() {
   });
 });
 
+
+
+
+
+
+// Function to toggle Like Button state
+function toggleLike(btnId, iconId, countId) {
+    var likeCount = document.getElementById(countId);
+    var likeIcon = document.getElementById(iconId);
+    var currentCount = parseInt(likeCount.textContent);
+    
+    // Toggle the like icon and increase/decrease the count
+    if (likeIcon.classList.contains('fa-thumbs-up')) {
+      likeIcon.classList.remove('fa-thumbs-up');
+      likeIcon.classList.add('fa-thumbs-down');
+      likeCount.textContent = currentCount + 1;
+    } else {
+      likeIcon.classList.remove('fa-thumbs-down');
+      likeIcon.classList.add('fa-thumbs-up');
+      likeCount.textContent = currentCount - 1;
+    }
+  }
+
+  // Function to handle cart item increment
+  function incrementCart(button) {
+    var countSpan = button.querySelector('.count');
+    var currentCount = parseInt(countSpan.textContent);
+    countSpan.textContent = currentCount + 1;
+  }
