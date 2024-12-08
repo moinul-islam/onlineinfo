@@ -52,11 +52,18 @@
                 <button class="bntStyle" type="button" id="notificationMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-bell"></i>
                 </button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationMenuButton">
-                    <li><a class="dropdown-item" href="#">Notification 1</a></li>
-                    <li><a class="dropdown-item" href="#">Notification 2</a></li>
-                    <li><a class="dropdown-item" href="#">Notification 3</a></li>
-                </ul>
+                
+
+
+                          <!-- Dropdown Menu -->
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationMenuButton">
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#createProfileModal">Create Profile</a></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#createPostModal">Create Post</a></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addProductServiceModal">Add Product/Service</a></li>
+          </ul>
+
+
+
             </div>
 
             <!-- User Profile -->
@@ -66,7 +73,178 @@
         </div>
     </nav>
 
+
+
+
+
+
+
+
+
+<!-- Create Profile Modal -->
+<div class="modal fade" id="createProfileModal" tabindex="-1" aria-labelledby="createProfileModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createProfileModalLabel">Create Profile</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <input type="file" class="form-control" id="profileImage" accept="image/*">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="profileName" placeholder="Enter Name">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="profileUsername" placeholder="Enter Username">
+          </div>
+          <div class="mb-3">
+            <input type="tel" class="form-control" id="profilePhone" placeholder="Enter Phone Number">
+          </div>
+          <div class="mb-3">
+            <select class="form-select" id="category">
+              <option value="technology">Select Catagory</option>
+              <option value="technology">Technology</option>
+              <option value="business">Business</option>
+              <option value="lifestyle">Lifestyle</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <select class="form-select" id="subCategory">
+              <option value="technology">Select Subcatagory</option>
+              <option value="sub1">Sub Category 1</option>
+              <option value="sub2">Sub Category 2</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <select class="form-select" id="topic">
+              <option value="technology">Select Topic</option>
+              <option value="topic1">Topic 1</option>
+              <option value="topic2">Topic 2</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="country" placeholder="Enter Country">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="city" placeholder="Enter City">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="area" placeholder="Enter Area">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="address" rows="3" placeholder="Enter Address"></textarea>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="profileDetails" rows="3" placeholder="Enter Details"></textarea>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-primary">Create Profile</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  
+  <!-- Create Post Modal -->
+  <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createPostModalLabel">Create Post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <select class="form-select" id="selectProfile">
+              <option value="technology">Select Profile</option>
+              <option value="technology">Moinul Islam</option>
+              <option value="business">NIOM IT</option>
+              <option value="lifestyle">Kutubpurbashi</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <input type="file" class="form-control" id="profileImage" accept="image/*">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="postTopic" placeholder="Enter Post Topic">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="postTitle" placeholder="Enter Post Title">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="postDetails" rows="3" placeholder="Enter Post Details"></textarea>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-primary">Post</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <!-- Add Product/Service Modal -->
+  <div class="modal fade" id="addProductServiceModal" tabindex="-1" aria-labelledby="addProductServiceModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addProductServiceModalLabel">Add Product/Service</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <select class="form-select" id="selectProfile">
+              <option value="technology">Select Profile</option>
+              <option value="technology">Moinul Islam</option>
+              <option value="business">NIOM IT</option>
+              <option value="lifestyle">Kutubpurbashi</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <input type="file" class="form-control" id="profileImage" accept="image/*">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="postTopic" placeholder="Enter Product/Service Catagory">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="postTitle" placeholder="Enter Product/Service Name">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="postTitle" placeholder="Enter Product/Service Price">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="postDetails" rows="3" placeholder="Enter Product/Service Details"></textarea>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-primary">Add Product/Service</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+
     
+
+
+
+
+
+
+
+
+
+
+
     <!-- Modal -->
     <div class="modal fade" id="countryModal" tabindex="-1" aria-labelledby="countryModalLabel" aria-hidden="true">
         <div class="modal-dialog">
