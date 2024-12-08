@@ -91,3 +91,7 @@ margin-top: 5px;
 display: block;
 text-align: center;
 }
+
+.carousel-item {
+    height: 160px;
+}
