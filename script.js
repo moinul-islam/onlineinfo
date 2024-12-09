@@ -381,3 +381,55 @@ function toggleLike(btnId, iconId, countId) {
     var currentCount = parseInt(countSpan.textContent);
     countSpan.textContent = currentCount + 1;
   }
+
+
+
+
+//   login signup togol 
+document.getElementById("nextButtonUnique").addEventListener("click", function () {
+    const phoneInput = document.getElementById("phoneUnique").value.trim();
+    const passwordField = document.getElementById("passwordFieldUnique");
+    const nameField = document.getElementById("nameFieldUnique");
+    const imageField = document.getElementById("imageFieldUnique");
+    const forgetPasswordLink = document.getElementById("forgetPasswordLink");
+    const nextButton = document.getElementById("nextButtonUnique");
+
+    // Reset all fields and link initially
+    passwordField.style.display = "none";
+    nameField.style.display = "none";
+    imageField.style.display = "none";
+    forgetPasswordLink.style.display = "none";
+
+    if (phoneInput === "123") {
+        // Show password field and "Forget Password?" link
+        passwordField.style.display = "block";
+        forgetPasswordLink.style.display = "block";
+
+        // Change button text to "Login"
+        nextButton.textContent = "Login";
+
+        // Add Show/Hide functionality for password
+        const passwordInput = document.getElementById("passwordUnique");
+        const togglePassword = document.getElementById("togglePasswordUnique");
+
+        togglePassword.addEventListener("click", function () {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePassword.textContent = "Hide";
+            } else {
+                passwordInput.type = "password";
+                togglePassword.textContent = "Show";
+            }
+        });
+    } else if (phoneInput !== "") {
+        // Show name, image upload, and password fields
+        nameField.style.display = "block";
+        imageField.style.display = "block";
+        passwordField.style.display = "block";
+
+        // Change button text to "Signup"
+        nextButton.textContent = "Signup";
+    } else {
+        alert("Please enter a phone number.");
+    }
+});
