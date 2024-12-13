@@ -391,6 +391,7 @@ document.getElementById("nextButtonUnique").addEventListener("click", function (
     const passwordField = document.getElementById("passwordFieldUnique");
     const nameField = document.getElementById("nameFieldUnique");
     const imageField = document.getElementById("imageFieldUnique");
+    const otpField = document.getElementById("otpFieldUnique");
     const forgetPasswordLink = document.getElementById("forgetPasswordLink");
     const nextButton = document.getElementById("nextButtonUnique");
 
@@ -398,6 +399,7 @@ document.getElementById("nextButtonUnique").addEventListener("click", function (
     passwordField.style.display = "none";
     nameField.style.display = "none";
     imageField.style.display = "none";
+    otpField.style.display = "none";
     forgetPasswordLink.style.display = "none";
 
     if (phoneInput === "123") {
@@ -426,6 +428,7 @@ document.getElementById("nextButtonUnique").addEventListener("click", function (
         nameField.style.display = "block";
         imageField.style.display = "block";
         passwordField.style.display = "block";
+        otpField.style.display = "block";
 
         // Change button text to "Signup"
         nextButton.textContent = "Signup";
