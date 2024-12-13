@@ -28,9 +28,21 @@
                     <tr>
                         <th>Type</th>
                         <th>Name</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody id="dataTable">
+                    <tr>
+                        <td>Country</td>
+                        <td>Bangladesh
+                            
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCountryModal">Edit</a>
+                            <a href="#" class="btn btn-success">Accept</a>
+                            <a href="#" class="btn btn-danger">Desiable</a>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -279,12 +291,36 @@
     
 
     <script>
-  document.addEventListener("DOMContentLoaded", () => {
+ document.addEventListener("DOMContentLoaded", () => {
     const dataTable = document.getElementById("dataTable");
 
-    function addRow(...columns) {
+    // Updated addRow function to combine Country Code and Country Name into one cell
+    function addRow(type, ...columns) {
         const row = document.createElement("tr");
-        row.innerHTML = columns.map(value => `<td>${value}</td>`).join("");
+        
+        // Add the type as the first column
+        const typeCell = document.createElement("td");
+        typeCell.textContent = type;
+        row.appendChild(typeCell);
+        
+        // Combine Country Code and Country Name into a single column if it's the first two values
+        if (columns[0] && columns[1]) {
+            const countryCell = document.createElement("td");
+            countryCell.textContent = `${columns[0]}, ${columns[1]}`; // Country Code and Country Name combined with a comma
+            row.appendChild(countryCell);
+
+            // Skip adding individual cells for these two values
+            columns = columns.slice(2); // Remove first two values as they're already added
+        }
+
+        // Add the remaining columns to the row
+        columns.forEach(value => {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            row.appendChild(cell);
+        });
+
+        // Append the row to the table
         dataTable.appendChild(row);
     }
 
@@ -331,8 +367,13 @@
             });
 
             if (values.every(value => value)) {
+                // Add the row with the form data
                 addRow(type, ...values);
+
+                // Clear the form inputs
                 inputs.forEach(inputId => (document.getElementById(inputId).value = ""));
+
+                // Close the modal
                 const modal = bootstrap.Modal.getInstance(form.closest(".modal"));
                 modal.hide();
             } else {
