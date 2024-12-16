@@ -116,4 +116,7 @@ display: block;
 text-align: center;
 }
 
+.redText {
+    color: rgb(15, 156, 199);
+}
 
